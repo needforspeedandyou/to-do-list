@@ -40,16 +40,53 @@ input {
 input::placeholder {
     color: rgb(175, 175, 175);
 }
-
-button {
+#addTask {
     margin-left: 20px;
+}
+button {
     border: 1px solid white;
     background: none;
     color: white;
     padding: 3px 10px;
     border-radius: 5px;
     cursor: pointer;
+    transition: 200ms;
 }
 button:hover {
     filter: brightness(80%);
+    transition: 200ms;
+}
+#taskList {
+    margin-top: 20px;
+    text-align: left;
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.task {
+    list-style-type: none;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+}
+.task span {
+    display: flex;
+    gap: 5px;
+}
+.red {
+    border-color: rgb(230, 113, 113);
+    background: rgba(230, 113, 113, 0.192);
+}
+.green {
+    border-color: rgb(123, 230, 113);
+    background: rgba(123, 230, 113, 0.192);
+}
+.done {
+    text-decoration: line-through;
+    transition: 200ms;
+    filter: brightness(80%);
+}
+.done button {
+    display: none;
 }
